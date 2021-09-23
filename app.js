@@ -3,16 +3,9 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 
-const cors = require("cors");
-const bodyparser = require("body-parser");
-
-
 const testUsers = {}
 
 const app = express();
-
-app.use(cors());
-app.use(bodyparser())
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -75,7 +68,8 @@ function verifyUser(token) {
         uid: userID,
       login: uLogin,
       email: uEmail,
-       
+       user: {id: userID, login: uLogin, email: uEmail},
+      users: [{uid: userID, login: uLogin, email: uEmail}]
     };
 
     testUsers[token] = userData
@@ -109,5 +103,3 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
-
-
