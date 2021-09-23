@@ -68,8 +68,6 @@ function verifyUser(token) {
         uid: userID,
       login: uLogin,
       email: uEmail,
-       user: {id: userID, login: uLogin, email: uEmail},
-      users: [{uid: userID, login: uLogin, email: uEmail}]
     };
 
     testUsers[token] = userData
