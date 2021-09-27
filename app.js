@@ -63,7 +63,7 @@ function verifyUser(token) {
 
     const uLogin = "login_" + userID;
     const uEmail = userID + "@test.com";
-	const uFullName = "Logesh sharma";
+	const uFullName = "Logesh sharma1";
 
     userData = {
         uid: userID,
