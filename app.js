@@ -47,7 +47,6 @@ app.get('/user/verify', (req, res, next) => {
 
 function verifyUser(token) {
 
-console.log("token ...................", token);
   // TODO:
   // here basically we need to verify a provided data (e.g. token)) against DB
   // and if the provided token is valid -> return a data with specified format back to ConnectCube server,
@@ -60,21 +59,11 @@ console.log("token ...................", token);
 
   let userData = testUsers[token]
   if (!userData) {
-	  let randomMultiples 
-	  let uFullName
-	  if(token == "1"){
-		  randomMultiples  = 1000000
-		  uFullName = "Logesh sharma1";
-	  }else if(token == "2"){
-		  randomMultiples  = 10000
-		  uFullName = "Logesh sharma2";
-	  }
-    const userID = Math.floor(Math.random() * randomMultiples);
+    const userID = Math.floor(Math.random() * 10000);
 
     const uLogin = "login_" + userID;
     const uEmail = userID + "@test.com";
-	console.log("randomMultiples", randomMultiples);
-	console.log("uFullName", uFullName);
+	const uFullName = "Logesh sharma";
 
     userData = {
         uid: userID,
