@@ -62,12 +62,12 @@ function verifyUser(token) {
 	  let randomMultiples
 	  if(token == "1"){
 		  randomMultiples = 1000000
-	  }else if(token == "2"){
+	  }else {
 		  randomMultiples = 10000
 	  }
 	  
 	  
-    const userID = Math.floor(Math.random() * 10000);
+    const userID = Math.floor(Math.random() * randomMultiples);
 
     const uLogin = "login_" + userID;
     const uEmail = userID + "@test.com";
