@@ -60,13 +60,10 @@ function verifyUser(token) {
   let userData = testUsers[token]
   if (!userData) {
 	  let randomMultiples
-	  let uFullName
 	  if(token == "1"){
 		  randomMultiples = 1000000
-		  uFullName = "Logesh sharma1"
 	  }else if(token == "2"){
 		  randomMultiples = 10000
-		   uFullName = "Logesh sharma2"
 	  }
 	  
 	  
@@ -74,6 +71,7 @@ function verifyUser(token) {
 
     const uLogin = "login_" + userID;
     const uEmail = userID + "@test.com";
+    const uFullName = "Logesh sharma"+userID ;
 
     userData = {
         uid: userID,
