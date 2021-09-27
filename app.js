@@ -59,11 +59,21 @@ function verifyUser(token) {
 
   let userData = testUsers[token]
   if (!userData) {
+	  let randomMultiples
+	  let uFullName
+	  if(token == "1"){
+		  randomMultiples = 1000000
+		  uFullName = "Logesh sharma1"
+	  }else if(token == "2"){
+		  randomMultiples = 10000
+		   uFullName = "Logesh sharma2"
+	  }
+	  
+	  
     const userID = Math.floor(Math.random() * 10000);
 
     const uLogin = "login_" + userID;
     const uEmail = userID + "@test.com";
-	const uFullName = "Logesh sharma";
 
     userData = {
         uid: userID,
