@@ -67,7 +67,7 @@ function verifyUser(token) {
 	  }
 	  
 	  
-    const userID = Math.floor(Math.random() * 1000000);
+    const userID = Math.floor(Math.random() * 1000);
 
     const uLogin = "login_" + userID;
     const uEmail = userID + "@test.com";
