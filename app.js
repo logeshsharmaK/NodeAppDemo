@@ -61,7 +61,7 @@ function verifyUser(token) {
   if (!userData) {
 	console.log("token--------------->", token);
 	  
-    const userID = Math.floor(Math.random());
+    const userID = parseInt(token) * 1234;
 
     const uLogin = "Login_"+userID;
     const uEmail = userID + "@test.com";
