@@ -31,7 +31,7 @@ app.post('/user/verify', (req, res, next) => {
 });
 
 app.get('/user/verify', (req, res, next) => {
-  const token = req.query.token
+  const token = req.body.token
 
   console.log("GET /user/verify. token: ", token);
 
@@ -59,17 +59,11 @@ function verifyUser(token) {
 
   let userData = testUsers[token]
   if (!userData) {
-	//  let randomMultiples
-	  //if(token == "1"){
-	//	  randomMultiples = 1000000
-	  //}else {
-		//  randomMultiples = 10000
-	//  }
-	  console.log("token--------------->", token);
+	 console.log("token--------------->", token);
 	  
-    const userID = Math.floor(Math.random() * 100000);
+    const userID = token;
 
-    const uLogin = ""+userID;
+    const uLogin = "login_"+userID;
     const uEmail = userID + "@test.com";
     const uFullName = "Logesh sharma"+userID ;
 
